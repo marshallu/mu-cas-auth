@@ -1,0 +1,12 @@
+{
+	"name": "marshallu/mu-cas-auth",
+	"description": "Authentication plugin for Marshall website using CAS.",
+	"type": "wordpress-plugin",
+	"license": "GPL2",
+    "require-dev": {
+        "paulthewalton/acf-pro-stubs": "5.8.9.1",
+		"squizlabs/php_codesniffer": "3.*",
+        "wp-coding-standards/wpcs": "^2.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1"
+    }
+}
