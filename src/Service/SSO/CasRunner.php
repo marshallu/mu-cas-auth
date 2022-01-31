@@ -92,6 +92,7 @@ class CasRunner
     }
     $queryString = rtrim($queryString, '&');
 
+	die('scheme: ' . $serviceUrlParts['scheme');
     return urlencode($serviceUrlParts['scheme'] . '://' . $serviceUrlParts['host'] . $serviceUrlParts['path'] . $queryString);
   }
 
