@@ -70,10 +70,10 @@ class CasRunner
 
   private static function getServiceUrl()
   {
-	  $scheme = 'http://';
+	  $scheme = 'http';
 
 	  if ( isset( $_SERVER['HTTP_USER_AGENT_HTTPS'] ) && 'ON' === $_SERVER['HTTP_USER_AGENT_HTTPS'] ) {
-		  $scheme = 'https://';
+		  $scheme = 'https';
 	  }
 
     $currentUrl = $scheme
