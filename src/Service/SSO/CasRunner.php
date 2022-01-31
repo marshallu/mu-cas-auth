@@ -92,7 +92,7 @@ class CasRunner
     }
     $queryString = rtrim($queryString, '&');
 
-    return urlencode($serviceUrlParts['scheme'] . '://' . $serviceUrlParts['host'] . $serviceUrlParts['path'] . $queryString);
+    return urlencode($serviceUrlParts['scheme'] . '' . $serviceUrlParts['host'] . $serviceUrlParts['path'] . $queryString);
   }
 
   private static function validateCasTicket($casHost, $casPath, $ticket)
