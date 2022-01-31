@@ -70,7 +70,13 @@ class CasRunner
 
   private static function getServiceUrl()
   {
-    $currentUrl = $_SERVER['REQUEST_SCHEME']
+	  $scheme = 'http://';
+
+	  if ( isset( $_SERVER['HTTP_USER_AGENT_HTTPS'] ) && 'ON' === $_SERVER['HTTP_USER_AGENT_HTTPS'] ) {
+		  $scheme = 'https://';
+	  }
+
+    $currentUrl = $scheme
       . '://' . trim($_SERVER['HTTP_HOST'], '/')
       . '/'
       . ltrim($_SERVER['REQUEST_URI'], '/');
@@ -92,7 +98,6 @@ class CasRunner
     }
     $queryString = rtrim($queryString, '&');
 
-	die('scheme: ' . $serviceUrlParts['scheme');
     return urlencode($serviceUrlParts['scheme'] . '://' . $serviceUrlParts['host'] . $serviceUrlParts['path'] . $queryString);
   }
 
